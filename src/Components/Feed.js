@@ -1,10 +1,12 @@
 import React from 'react'
-import './Feed.css'
+import Carrot from './Carrot'
+import BunnyDiv from './BunnyDiv'
 
 export default function Feed(props) {
     return (
-        <div className="Test" onClick={props.onFeed}>
-            Click on me
-        </div>
+        <React.Fragment>
+            <Carrot/>
+            <BunnyDiv/>
+        </React.Fragment>
     )
 }

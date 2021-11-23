@@ -10,11 +10,11 @@ export default function Alea() {
 
     useEffect(() => {
         for (let i = 1; i < nbOccur; i++) {
-            const aleatoire = setTimeout(() => {
+            setTimeout(() => {
                 let val = tab[Math.floor(Math.random() * tab.length)];
                 setValue(val)
                 console.log(100+Math.sqrt(1 - Math.pow(i-1 ,2)));
-                (i == nbOccur-1) && setChoosed(val);
+                (i === nbOccur-1) && setChoosed(val);
             }, i*i*i*i/1000);
         }
     }, [])
