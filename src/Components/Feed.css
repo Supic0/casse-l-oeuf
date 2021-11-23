@@ -1,0 +1,10 @@
+.Test {
+    width: 100px;
+    Border-radius: 3px;
+    Border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    user-select: none;
+}
