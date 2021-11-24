@@ -21,14 +21,13 @@ export default function Oeuf() {
             return (<img src={egg1} alt="egg" />)
         } else if (nbClick / nbClickMax * 100 < 60) {
             return(<img src={egg2} alt="egg" />)
-        } else if (nbClick / nbClickMax * 100 < 75) {
+        } else if (nbClick / nbClickMax * 100 < 100) {
             return (<img src={egg3} alt="egg" />)
-        } else if (nbClick /  nbClickMax * 100 >= 100) {
-                return (<React.fragment>
+        } else if (nbClick / nbClickMax * 100 >= 100) {
+                return (<div>
                     <img src={egg41} alt="egg" />
                     <img src={egg42} alt="egg" />
-                </React.fragment>)
-            setNbClick(0);
+                    </div>)
         }
     }
 
