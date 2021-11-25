@@ -1,10 +1,39 @@
 .Oeuf {
-    background-color: bisque;
-    width: 100px;
-    height: 200px;
-    border-radius: 50%;
+    width: 100%;
     position: absolute;
+    margin-top: 0;
+    transition-property: margin-top, opacity;
+    transition-duration: 1s,2s;
+    transform-style: ease-out;
+    transition-delay: 0s,1s;
+    opacity: 1;
 }
-img {
-    width: 18rem;
+.Oeufanim {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Oeufapp {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.up {
+    margin-top: -200px;
+    opacity:0;
+}
+
+.down {
+    opacity:0;
 }

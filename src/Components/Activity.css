@@ -1,5 +1,7 @@
 .Activity {
-    width: 18rem;
-    position: absolute;
-
+    width: 12rem;
+}
+.imageActivity {
+    width:100%;
+    border-radius: 25px;
 }
