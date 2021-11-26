@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState} from 'react'
 import './Oeuf.css'
 import Activity from './Activity'
 import egg1 from '../images/egg1.png'
@@ -26,20 +26,20 @@ export default function Oeuf() {
         <div className="Oeufapp">
             <div className="Oeufanim">
 
-                {(nbClick <= nbClickMax) && <img src={egg42back} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
+                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé arrière" src={egg42back} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
                 <Activity />
-                {(nbClick <= nbClickMax) && <img src={egg41} className={`Oeuf ${nbClick === nbClickMax && "up"}`} ></img>}
-                {(nbClick <= nbClickMax) && <img src={egg42front} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
+                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front up"src={egg41} className={`Oeuf ${nbClick === nbClickMax && "up"}`} ></img>}
+                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front down"src={egg42front} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
 
             </div>
 
-            {(nbClick < nbClickMax) && (<img src={egg3} className="Oeuf" onClick={tapeOeuf}>
+            {(nbClick < nbClickMax) && (<img alt="Oeuf cassé" src={egg3} className="Oeuf" onClick={tapeOeuf}>
             </img>)}
 
-            {(nbClick < 5) && (<img src={egg2} className="Oeuf" onClick={tapeOeuf}>
+            {(nbClick < 5) && (<img alt="Oeuf cassé" src={egg2} className="Oeuf" onClick={tapeOeuf}>
             </img>)}
 
-            {(nbClick < 2) && (<img src={egg1} className="Oeuf" onClick={tapeOeuf}>
+            {(nbClick < 2) && (<img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf}>
             </img>)}
 
         </div>
