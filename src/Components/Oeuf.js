@@ -16,21 +16,24 @@ export default function Oeuf() {
 
     const tapeOeuf = e => {
         setNbClick(prevNbClick => prevNbClick + 1);
+        (nbClick === nbClickMax - 1 ) && setTimeout(() => {
+            setNbClick(prevNbClick => prevNbClick + 1)
+        }, 3000);
     }
 
 
     return (
         <div className="Oeufapp">
             <div className="Oeufanim">
-                
-                <img src={egg42back} className={`Oeuf ${nbClick===10&& "down"}`}></img>
-                <Activity/>
-                <img src={egg41} className={`Oeuf ${nbClick===10&& "up"}`} ></img>
-                <img src={egg42front} className={`Oeuf ${nbClick===10&& "down"}`}></img>
+
+                {(nbClick <= nbClickMax) && <img src={egg42back} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
+                <Activity />
+                {(nbClick <= nbClickMax) && <img src={egg41} className={`Oeuf ${nbClick === nbClickMax && "up"}`} ></img>}
+                {(nbClick <= nbClickMax) && <img src={egg42front} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
 
             </div>
 
-            {(nbClick < 10) && (<img src={egg3} className="Oeuf" onClick={tapeOeuf}>
+            {(nbClick < nbClickMax) && (<img src={egg3} className="Oeuf" onClick={tapeOeuf}>
             </img>)}
 
             {(nbClick < 5) && (<img src={egg2} className="Oeuf" onClick={tapeOeuf}>

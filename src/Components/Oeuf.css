@@ -1,5 +1,6 @@
 .Oeuf {
     width: 100%;
+    display: block;
     position: absolute;
     margin-top: 0;
     transition-property: margin-top, opacity;
@@ -36,4 +37,5 @@
 
 .down {
     opacity:0;
+    margin-top: 50px;
 }
