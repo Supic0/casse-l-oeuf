@@ -3,6 +3,7 @@ import Main from './Components/Main'
 import AddActivity from './Components/AddActivity';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+import Connexion from './Components/Connexion';
 
 export default function App() {
 
@@ -28,17 +29,17 @@ export default function App() {
   }
 
   const clickToEgg = () => {
-    setGoAddActivity(false);
+    listActivities[0] && setGoAddActivity(false);
   }
 
   if (isConnected) {
     if (goAddActivity) {
       return <AddActivity clickToEgg={clickToEgg} addActivityItem={addActivityItem} listActivities={listActivities} delItem={delItem} />
     } else {
-      return <Main clickToAddActivity={clickToAddActivity} />
+    return <Main clickToAddActivity={clickToAddActivity} listActivities={listActivities}/>
     }
   } else {
-    return null;
+    return <Connexion setIsConnected={setIsConnected}/>;
   }
 
 }

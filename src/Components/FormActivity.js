@@ -8,7 +8,7 @@ export default function FormActivity({addActivityItem}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const id = Math.floor(Math.random() * 10000000000);
-        addActivityItem({name:value,id:id});
+        value!=0&&addActivityItem({name:value,id:id});
         setValue("");
     }
 

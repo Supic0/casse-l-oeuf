@@ -8,7 +8,7 @@ import egg41 from '../images/egg4-1.png'
 import egg42front from '../images/egg42front.png'
 import egg42back from '../images/egg42back.png'
 
-export default function Oeuf() {
+export default function Oeuf({listActivities}) {
 
     const nbClickMax = 10;
     const [nbClick, setNbClick] = useState(1);
@@ -27,7 +27,7 @@ export default function Oeuf() {
             <div className="Oeufanim">
 
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé arrière" src={egg42back} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
-                <Activity />
+                <Activity listActivities={listActivities}/>
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front up"src={egg41} className={`Oeuf ${nbClick === nbClickMax && "up"}`} ></img>}
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front down"src={egg42front} className={`Oeuf ${nbClick === nbClickMax && "down"}`}></img>}
 

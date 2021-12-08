@@ -2,3 +2,10 @@ ul {
     list-style-type: none;
     
 }
+.card.listActivity {
+    position: absolute;
+    width: 20%;
+    top: 10%;
+    right: 5%;
+    Height: 75%;
+}
