@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './AddActivity.css'
 import FormActivity from './FormActivity'
 import List from './List'
 
-export default function AddActivity({ clickToEgg, addActivityItem, listActivities, delItem }) {
+export default function AddActivity({ addActivityItem, listActivities, delItem}) {
+
 
     return (
-        <div>
-            <FormActivity addActivityItem={addActivityItem} />
+        <div className="" style={{position:"relative", width:"100%", height:"100%", overflow:"hidden"}}>
+            <FormActivity addActivityItem={addActivityItem}  />
             <List listActivities={listActivities} delItem={delItem}/>
-            <button className="btn btn-primary" onClick={clickToEgg}>Casser l'oeuf !</button>
+            
         </div>
     )
 }

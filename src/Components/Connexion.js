@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useForm } from "react-hook-form";
 import './Connexion.css'
 import Inscription from './Inscription';
 
-export default function Connexion({ setIsConnected }) {
+export default function Connexion({ setAllLoaded }) {
 
     const [formulaire, setFormulaire] = useState(1);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+    useEffect(() => {
+        setAllLoaded(true);
+    }, [])
+
     const onSubmit = data => {
         console.log(data);
     }
 
     if (formulaire === 1) {
         return (
-            <div className="FormDiv">
+            <div className="FormDiv" >
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-floating mb-3">
                         <input {...register("Email", { required: true })} type="email" className={`form-control ${errors.Email?"is-invalid":""}`} id="floatingInput" placeholder="name@example.com" required />

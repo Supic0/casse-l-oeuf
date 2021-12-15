@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Main from './Components/Main'
 import AddActivity from './Components/AddActivity';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import Connexion from './Components/Connexion';
+import { Routes, Route } from 'react-router-dom';
+
 
 export default function App() {
 
-  const [goAddActivity, setGoAddActivity] = useState(true);
-  const [isConnected, setIsConnected] = useState(true);
   const [listActivities, setListActivities] = useState([]);
+
+
 
 
   const delItem = (item) => {
@@ -24,22 +26,15 @@ export default function App() {
     }
   }
 
-  const clickToAddActivity = () => {
-    setGoAddActivity(true);
-  }
 
-  const clickToEgg = () => {
-    listActivities[0] && setGoAddActivity(false);
-  }
-
-  if (isConnected) {
-    if (goAddActivity) {
-      return <AddActivity clickToEgg={clickToEgg} addActivityItem={addActivityItem} listActivities={listActivities} delItem={delItem} />
-    } else {
-    return <Main clickToAddActivity={clickToAddActivity} listActivities={listActivities}/>
-    }
-  } else {
-    return <Connexion setIsConnected={setIsConnected}/>;
-  }
+  return (
+    <React.Fragment>
+      <Routes>
+        <Route path="/" exact element={<Main listActivities={listActivities} />} />
+        <Route path="/AddActivity" exact element={<AddActivity addActivityItem={addActivityItem}  listActivities={listActivities} delItem={delItem} />} />
+        <Route path="/Connexion" exact element={<Connexion  />} />
+      </Routes>
+    </React.Fragment>
+  )
 
 }

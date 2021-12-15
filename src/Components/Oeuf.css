@@ -18,9 +18,16 @@
 
 }
 
+.panier {
+    position: absolute;
+    bottom: 5%;
+    width: 180%;
+
+}
+
 .Oeufapp {
-    width: 300px;
-    height: 500px;
+    width: 200px;
+    height: 400px;
     position: relative;
     top:50%;
     left:50%;

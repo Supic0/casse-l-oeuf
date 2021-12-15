@@ -24,8 +24,8 @@ export default function List({ listActivities, delItem }) {
                     bottom: "10px",
                     left:"50%",
                     transform:"translate(-50%)",
-                    width: "250px",
-                    height: "250px"
+                    width: "80%",
+                    height: "auto"
                 }}
                 loop autoplay>
                 </lottie-player>}

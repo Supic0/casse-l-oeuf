@@ -1,7 +1,9 @@
 .Activity {
-    width: 12rem;
+    width: 50%;
     position: absolute;
 }
+
+
 .imageActivity {
     width:100%;
     border-radius: 25px;
@@ -11,7 +13,7 @@
     width: 100%;
 }
 .name p {
-    font-size: 1.2rem;
+    font-size: 80%;
     margin-top: 10px;
     border-style: dashed;
     border-width: 3px;
@@ -21,4 +23,12 @@
     border-radius: 10px;
     padding-bottom: 3px;
     
+}
+
+.reload {
+    position: absolute;
+    left: 100%;
+    top: 0%;
+    transform: translate(-50%,-50%);
+    width: 35%;
 }
