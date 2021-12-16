@@ -30,9 +30,9 @@ export default function App() {
   return (
     <React.Fragment>
       <Routes>
-        <Route path="/" exact element={<Main listActivities={listActivities} />} />
-        <Route path="/AddActivity" exact element={<AddActivity addActivityItem={addActivityItem}  listActivities={listActivities} delItem={delItem} />} />
-        <Route path="/Connexion" exact element={<Connexion  />} />
+        <Route path="/casse-l-oeuf/" exact element={<Main listActivities={listActivities} />} />
+        <Route path="/casse-l-oeuf/AddActivity" exact element={<AddActivity addActivityItem={addActivityItem}  listActivities={listActivities} delItem={delItem} />} />
+        <Route path="/casse-l-oeuf/Connexion" exact element={<Connexion  />} />
       </Routes>
     </React.Fragment>
   )

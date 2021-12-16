@@ -30,7 +30,7 @@ export default function FormActivity({ addActivityItem }) {
                     </svg>
                     </div>
                 </form>
-                <Link to="/">
+                <Link to="/casse-l-oeuf/">
                 <button
                     className="btn btn-primary"
                     style={{ position: "relative", left: "50%", transform: "translate(-50%)", margin: "0", marginTop: '20px' }}>Jouer
