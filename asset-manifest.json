@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/casse-l-oeuf/static/css/main.475cb6b7.chunk.css",
-    "main.js": "/casse-l-oeuf/static/js/main.c5c04ffe.chunk.js",
-    "main.js.map": "/casse-l-oeuf/static/js/main.c5c04ffe.chunk.js.map",
+    "main.js": "/casse-l-oeuf/static/js/main.b6815c8a.chunk.js",
+    "main.js.map": "/casse-l-oeuf/static/js/main.b6815c8a.chunk.js.map",
     "runtime-main.js": "/casse-l-oeuf/static/js/runtime-main.695e0c95.js",
     "runtime-main.js.map": "/casse-l-oeuf/static/js/runtime-main.695e0c95.js.map",
     "static/css/2.383c0125.chunk.css": "/casse-l-oeuf/static/css/2.383c0125.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.b60a6253.chunk.js",
     "static/css/main.475cb6b7.chunk.css",
-    "static/js/main.c5c04ffe.chunk.js"
+    "static/js/main.b6815c8a.chunk.js"
   ]
 }
