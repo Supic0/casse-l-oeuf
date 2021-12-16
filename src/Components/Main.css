@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
 .main {
     position:relative;
     padding:0;
@@ -10,8 +13,32 @@
     height: 100%;
     position: relative;
 
+    background-position: center;
+    background-size: cover;
+
 }
 .goToAdd {
     margin: 5px;
 }
+.indicationOeuf {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    white-space:nowrap;
+}
+.tapeOeuf {
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    top: 20%;
+    left: 0%;
+    pointer-events: none;
+}
+#arrow {
+    width: 65%;
+    height: auto;
+    transform: rotate(55deg);
+    margin-right: -30%;
+    margin-top: 8%;
 
+}

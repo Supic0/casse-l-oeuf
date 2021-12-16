@@ -2,7 +2,7 @@
   "name": "react_feedbunny",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Supic0.github.io/casse-l-oeuf",
+  "homepage": "https://Supic0.github.io/",
   "dependencies": {
     "@hookform/resolvers": "^2.8.4",
     "@testing-library/jest-dom": "^5.15.0",

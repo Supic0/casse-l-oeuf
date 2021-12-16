@@ -9,9 +9,18 @@ export default function Main({ listActivities }) {
 
     const [allLoaded, setAllLoaded] = useState(false);
     const [style, setStyle] = useState({});
+    const [nbClick, setNbClick] = useState(0);
+    const nbClickMax = 10;
+
+    const tapeOeuf = e => {
+        setNbClick(prevNbClick => prevNbClick + 1);
+        (nbClick === nbClickMax - 1 ) && setTimeout(() => {
+            setNbClick(prevNbClick => prevNbClick + 1)
+        }, 3000);
+    }
 
     useEffect(() => {
-        if (allLoaded == true) {
+        if (allLoaded === true) {
             setTimeout(function () {
                 setStyle({ display: 'none' });
             }, 2000);
@@ -31,7 +40,14 @@ export default function Main({ listActivities }) {
                     <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
                 </svg>
             </Link>
-            <Oeuf listActivities={listActivities} setAllLoaded={setAllLoaded} />
+            
+            {(nbClick < 10)&&
+            <div className="tapeOeuf">
+            <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_c6aifjew.json" id="arrow"  background="transparent"  speed="1.4"  loop  autoplay></lottie-player>
+            <p className='indicationOeuf'>Tape sur l'oeuf !</p>
+            </div>}
+
+            <Oeuf listActivities={listActivities} setAllLoaded={setAllLoaded} tapeOeuf={tapeOeuf} nbClick={nbClick} setNbClick={setNbClick} nbClickMax={nbClickMax} />
         </div>
     )
 }
