@@ -9,13 +9,17 @@ import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
 
-  const [listActivities, setListActivities] = useState([]);
+  const [listActivities, setListActivities] = useState();
 
-
+  useEffect(() => {
+    if (localStorage.getItem("activities") != null) {
+      console.log(localStorage.getItem("activities"));
+    setListActivities(JSON.parse(localStorage.getItem("activities")))
+    }
+  }, [])
 
 
   const delItem = (item) => {
-    const newList = listActivities;
     setListActivities(listActivities.filter(el => el.name !== item.name))
   }
 
@@ -23,11 +27,13 @@ export default function App() {
     if (!listActivities.some(item => item.name === newItem.name)) {
       const newList = [...listActivities, newItem];
       setListActivities(newList);
+      localStorage.setItem('activities', JSON.stringify(newList));
     }
   }
 
-
+if (listActivities!=null){
   return (
+
     <React.Fragment>
       <Routes>
         <Route path="/casse-l-oeuf/" exact element={<Main listActivities={listActivities} />} />
@@ -35,6 +41,9 @@ export default function App() {
         <Route path="/casse-l-oeuf/Connexion" exact element={<Connexion  />} />
       </Routes>
     </React.Fragment>
+ 
   )
-
+  } else {
+    return(<React.Fragment></React.Fragment>)
+  }
 }

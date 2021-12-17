@@ -17,7 +17,7 @@ export default function ApiPopup({setApiPopup}) {
             </div>
             <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 aria-label="Close"
                 onClick={() => setApiPopup(false)}></button>
             <div className="imagesList">

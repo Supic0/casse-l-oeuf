@@ -9,16 +9,30 @@ import egg42front from '../images/egg42front.png'
 import egg42back from '../images/egg42back.png'
 import panier from '../images/panier.png'
 
-export default function Oeuf({listActivities, setAllLoaded, tapeOeuf, nbClick, setNbClick, nbClickMax}) {
+export default function Oeuf({listActivities, setAllLoaded}) {
 
+    const [nbClick, setNbClick] = useState(0);
+    const nbClickMax = 10;
 
+    const tapeOeuf = e => {
+        setNbClick(prevNbClick => prevNbClick + 1);
+        (nbClick === nbClickMax - 1) && setTimeout(() => {
+            setNbClick(prevNbClick => prevNbClick + 1)
+        }, 3000);
+    }
 
     return (
         <div className="Oeufapp">
+            
+            {(nbClick < 10) &&
+                    <div className="tapeOeuf">
+                        <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_c6aifjew.json" id="arrow" background="transparent" speed="1.4" loop autoplay></lottie-player>
+                        <p className='indicationOeuf'>Tape sur l'oeuf !</p>
+                    </div>}
             <div className="Oeufanim">
 
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé arrière" src={egg42back} className={`Oeuf ${(nbClick >= nbClickMax) ? "down": ""}`}></img>}
-                <Activity listActivities={listActivities} setNbClick={setNbClick}/>
+                <Activity setAllLoaded={setAllLoaded} listActivities={listActivities} setNbClick={setNbClick} nbClick={nbClick}/>
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front up"src={egg41} className={`Oeuf ${(nbClick >= nbClickMax) ? "up":""}`} ></img>}
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front down"src={egg42front} className={`Oeuf ${(nbClick >= nbClickMax) ? "down":""}`}></img>}
 
@@ -34,6 +48,7 @@ export default function Oeuf({listActivities, setAllLoaded, tapeOeuf, nbClick, s
             </img>)}
 
             {(nbClick < 10) && <img src={panier} className="panier"></img>}
+
             {(nbClick < 1) &&<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_RxwlFx.json" background="transparent" speed="1" id="tapIcon" loop  autoplay></lottie-player>}
         </div>
     )

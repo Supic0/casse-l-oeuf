@@ -1,46 +1,41 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Activity.css'
 import reload from '../icons/reload.png'
 
 
-export default function Activity({listActivities, setNbClick}) {
+export default function Activity({ setAllLoaded, listActivities, setNbClick, nbClick }) {
 
     const [itemChosen, setItemChosen] = useState({});
+    const ref = useRef()
+    const ref2 = useRef()
 
     const chose = () => {
-        if(listActivities[0]!=null){
-            setItemChosen(listActivities[Math.floor(Math.random() * listActivities.length)]);
-            }
-            else {
-            setItemChosen({id:0,name:"No Activity"});
-            }
+        let item = listActivities[Math.floor(Math.random() * listActivities.length)];
+        setItemChosen(item);
     }
 
 
     useEffect(() => {
-        if(listActivities[0]!=null){
-            setItemChosen(listActivities[Math.floor(Math.random() * listActivities.length)]);
-            }
-            else {
-            setItemChosen({id:0,name:"No Activity"});
-            }
+        let item = listActivities[Math.floor(Math.random() * listActivities.length)];
+        setItemChosen(item);
     }, [])
 
 
-    return (
-         
-        <div className="Activity">
-            <img alt="liée à l'activité" className="imageActivity"src="https://cdn-tam.ouest-france.fr/media/cache/thumb_400/recette-de-la-pate-a-modeler-tete-a-modeler.jpeg" />
-            <div className="name">
-                <p className="">{itemChosen.name}</p>
-            </div>
-            <img src={reload} className="reload" 
+
+
+return (
+
+    <div className={`Activity ${nbClick >= 10 ? "popOut" : ""}`}>
+        <img alt="liée à l'activité" className="imageActivity" src="https://cdn-tam.ouest-france.fr/media/cache/thumb_400/recette-de-la-pate-a-modeler-tete-a-modeler.jpeg" />
+            <div className="activityName">{itemChosen.name}</div>
+        <img src={reload} className="reload" href="/casse-l-oeuf/"
             onClick={() => {
+                setAllLoaded(false);
                 setNbClick(0);
                 chose();
             }
-                }></img>
+            }></img>
 
-        </div >
-    )
+    </div >
+)
 }
