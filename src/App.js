@@ -12,9 +12,10 @@ export default function App() {
   const [listActivities, setListActivities] = useState([{id:0,name:"Peinture"},{id:1,name:"Cache-Cache"},{id:2,name:"Manger un bonbon"}]);
 
   useEffect(() => {
-    if (localStorage.getItem("activities") != null) {
+    if (localStorage.getItem("activities")!=null && JSON.parse(localStorage.getItem("activities")).length!=0 ) {
+      console.log(localStorage.getItem("activities"))
     setListActivities(JSON.parse(localStorage.getItem("activities")))
-    }
+    } 
   }, [])
 
 

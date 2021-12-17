@@ -16,8 +16,11 @@ export default function Activity({ setAllLoaded, listActivities, setNbClick, nbC
 
 
     useEffect(() => {
+        if (listActivities.length!=0) {
         let item = listActivities[Math.floor(Math.random() * listActivities.length)];
         setItemChosen(item);
+        }
+
     }, [])
 
 

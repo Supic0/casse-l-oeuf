@@ -16,7 +16,7 @@ export default function FormActivity({ listActivities, addActivityItem }) {
     }
 
     return (
-        <React.Fragment>
+        <>
         <div style={{ position: "relative", width: "75%", height: "100%" }}>
             <div className="" style={{ width: "20%", position: "absolute", top: "50%", left: "60%", transform: "translate(-50%,-50%)" }}>
                 <button className="plus" onClick={() => setApiPopup(true)}></button>
@@ -39,6 +39,6 @@ export default function FormActivity({ listActivities, addActivityItem }) {
             
         </div>
         {apiPopup&& <ApiPopup setApiPopup={setApiPopup}/>}
-        </React.Fragment>
+        </>
     )
 }
