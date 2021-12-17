@@ -5,7 +5,7 @@ import reload from '../icons/reload.png'
 
 export default function Activity({ setAllLoaded, listActivities, setNbClick, nbClick }) {
 
-    const [itemChosen, setItemChosen] = useState({});
+    const [itemChosen, setItemChosen] = useState();
     const ref = useRef()
     const ref2 = useRef()
 
@@ -27,12 +27,12 @@ return (
 
     <div className={`Activity ${nbClick >= 10 ? "popOut" : ""}`}>
         <img alt="liée à l'activité" className="imageActivity" src="https://cdn-tam.ouest-france.fr/media/cache/thumb_400/recette-de-la-pate-a-modeler-tete-a-modeler.jpeg" />
-            <div className="activityName">{itemChosen.name}</div>
+            <div className="activityName">{itemChosen&&itemChosen.name}</div>
         <img src={reload} className="reload" href="/casse-l-oeuf/"
             onClick={() => {
                 setAllLoaded(false);
-                setNbClick(0);
-                chose();
+                setTimeout(()=>{setNbClick(0);
+                    chose();},500);
             }
             }></img>
 

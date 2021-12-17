@@ -9,18 +9,19 @@ import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
 
-  const [listActivities, setListActivities] = useState({id: 0, name: "nada"});
+  const [listActivities, setListActivities] = useState([{id:0,name:"Peinture"},{id:1,name:"Cache-Cache"},{id:2,name:"Manger un bonbon"}]);
 
   useEffect(() => {
     if (localStorage.getItem("activities") != null) {
-      console.log(localStorage.getItem("activities"));
     setListActivities(JSON.parse(localStorage.getItem("activities")))
     }
   }, [])
 
 
   const delItem = (item) => {
-    setListActivities(listActivities.filter(el => el.name !== item.name))
+    const newList = listActivities.filter(el => el.name !== item.name);
+    setListActivities(newList)
+    localStorage.setItem('activities', JSON.stringify(newList));
   }
 
   const addActivityItem = (newItem) => {

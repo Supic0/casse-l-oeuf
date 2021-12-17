@@ -3,7 +3,7 @@ import './FormActivity.css'
 import ApiPopup from './ApiPopup'
 import {Link} from 'react-router-dom'
 
-export default function FormActivity({ addActivityItem }) {
+export default function FormActivity({ listActivities, addActivityItem }) {
 
     const [value, setValue] = useState('');
     const [apiPopup, setApiPopup] = useState(false);
@@ -21,7 +21,7 @@ export default function FormActivity({ addActivityItem }) {
             <div className="" style={{ width: "20%", position: "absolute", top: "50%", left: "60%", transform: "translate(-50%,-50%)" }}>
                 <button className="plus" onClick={() => setApiPopup(true)}></button>
                 <form onSubmit={handleSubmit} className="form">
-                    <input className="input" type="text" maxlength="20" value={value} onChange={e => setValue(e.target.value)} />
+                    <input className="input" type="text" maxLength="20" value={value} onChange={e => setValue(e.target.value)} />
                     <div className="envoi"
                         onClick={handleSubmit}>
                     <svg
@@ -30,12 +30,11 @@ export default function FormActivity({ addActivityItem }) {
                     </svg>
                     </div>
                 </form>
-                <Link to="/casse-l-oeuf/">
-                <button
-                    className="btn btn-primary"
-                    style={{ position: "relative", left: "50%", transform: "translate(-50%)", margin: "0", marginTop: '20px' }}>Jouer
-                    </button>
-                </Link>
+                {(listActivities.length!=0)&&
+
+                <Link to="/casse-l-oeuf/" className="btn btn-primary jouer">
+                    Jouer
+                </Link>}
             </div>
             
         </div>

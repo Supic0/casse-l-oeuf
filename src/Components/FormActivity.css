@@ -53,3 +53,12 @@
 .envoi:active {
     filter: brightness(80%);
 }
+
+.jouer {
+    position: absolute;
+    bottom: -32%;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+    margin-top: 20px;
+}
