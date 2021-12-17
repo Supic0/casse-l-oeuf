@@ -6,8 +6,7 @@ import reload from '../icons/reload.png'
 export default function Activity({ setAllLoaded, listActivities, setNbClick, nbClick, nbClickMax }) {
 
     const [itemChosen, setItemChosen] = useState();
-    const ref = useRef()
-    const ref2 = useRef()
+
 
     const chose = () => {
         let item = listActivities[Math.floor(Math.random() * listActivities.length)];
