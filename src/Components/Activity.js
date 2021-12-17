@@ -3,7 +3,7 @@ import './Activity.css'
 import reload from '../icons/reload.png'
 
 
-export default function Activity({ setAllLoaded, listActivities, setNbClick, nbClick }) {
+export default function Activity({ setAllLoaded, listActivities, setNbClick, nbClick, nbClickMax }) {
 
     const [itemChosen, setItemChosen] = useState();
     const ref = useRef()
@@ -25,7 +25,7 @@ export default function Activity({ setAllLoaded, listActivities, setNbClick, nbC
 
 return (
 
-    <div className={`Activity ${nbClick >= 10 ? "popOut" : ""}`}>
+    <div className={`Activity ${nbClick >= nbClickMax ? "popOut" : ""}`}>
         <img alt="liée à l'activité" className="imageActivity" src="https://cdn-tam.ouest-france.fr/media/cache/thumb_400/recette-de-la-pate-a-modeler-tete-a-modeler.jpeg" />
             <div className="activityName">{itemChosen&&itemChosen.name}</div>
         <img src={reload} className="reload" href="/casse-l-oeuf/"

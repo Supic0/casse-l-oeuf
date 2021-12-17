@@ -12,7 +12,7 @@ import panier from '../images/panier.png'
 export default function Oeuf({listActivities, setAllLoaded}) {
 
     const [nbClick, setNbClick] = useState(0);
-    const nbClickMax = 10;
+    const nbClickMax = 20;
 
     const tapeOeuf = e => {
         setNbClick(prevNbClick => prevNbClick + 1);
@@ -24,7 +24,7 @@ export default function Oeuf({listActivities, setAllLoaded}) {
     return (
         <div className="Oeufapp">
             
-            {(nbClick < 10) &&
+            {(nbClick < nbClickMax) &&
                     <div className="tapeOeuf">
                         <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_c6aifjew.json" id="arrow" background="transparent" speed="1.4" loop autoplay></lottie-player>
                         <p className='indicationOeuf'>Tape sur l'oeuf !</p>
@@ -32,7 +32,7 @@ export default function Oeuf({listActivities, setAllLoaded}) {
             <div className="Oeufanim">
 
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé arrière" src={egg42back} className={`Oeuf ${(nbClick >= nbClickMax) ? "down": ""}`}></img>}
-                <Activity setAllLoaded={setAllLoaded} listActivities={listActivities} setNbClick={setNbClick} nbClick={nbClick}/>
+                {(listActivities.length!=0)&&<Activity nbClickMax={nbClickMax}setAllLoaded={setAllLoaded} listActivities={listActivities} setNbClick={setNbClick} nbClick={nbClick}/>}
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front up"src={egg41} className={`Oeuf ${(nbClick >= nbClickMax) ? "up":""}`} ></img>}
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front down"src={egg42front} className={`Oeuf ${(nbClick >= nbClickMax) ? "down":""}`}></img>}
 
@@ -41,13 +41,13 @@ export default function Oeuf({listActivities, setAllLoaded}) {
             {(nbClick < nbClickMax) && (<img alt="Oeuf cassé" src={egg3} className="Oeuf" onClick={tapeOeuf}>
             </img>)}
 
-            {(nbClick < 5) && (<img alt="Oeuf cassé" src={egg2} className="Oeuf" onClick={tapeOeuf}>
+            {(nbClick < nbClickMax*50/100) && (<img alt="Oeuf cassé" src={egg2} className="Oeuf" onClick={tapeOeuf}>
             </img>)}
 
-            {(nbClick < 2) && (<img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} onLoad={() => setAllLoaded(true)}>
+            {(nbClick < nbClickMax*5/100) && (<img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} onLoad={() => setAllLoaded(true)}>
             </img>)}
 
-            {(nbClick < 10) && <img src={panier} className="panier"></img>}
+            {(nbClick < nbClickMax) && <img src={panier} className="panier"></img>}
 
             {(nbClick < 1) &&<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_RxwlFx.json" background="transparent" speed="1" id="tapIcon" loop  autoplay></lottie-player>}
         </div>

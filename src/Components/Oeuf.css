@@ -41,13 +41,13 @@
 }
 
 .up {
-    margin-top: -200px;
+    margin-top: -130%;
     opacity:0;
 }
 
 .down {
     opacity:0;
-    margin-top: 50px;
+    margin-top: 50%;
 }
 
 #tapIcon {
@@ -63,7 +63,7 @@
 .indicationOeuf {
     position: absolute;
     top: -40%;
-    left: 15%;
+    left: 10%;
     font-family: 'Indie Flower', cursive;
     font-size: 200%;
     font-weight: bold;
