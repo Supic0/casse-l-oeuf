@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
 
-  const [listActivities, setListActivities] = useState();
+  const [listActivities, setListActivities] = useState({id: 0, name: "nada"});
 
   useEffect(() => {
     if (localStorage.getItem("activities") != null) {
@@ -31,7 +31,6 @@ export default function App() {
     }
   }
 
-if (listActivities!=null){
   return (
 
     <React.Fragment>
@@ -43,7 +42,4 @@ if (listActivities!=null){
     </React.Fragment>
  
   )
-  } else {
-    return(<React.Fragment></React.Fragment>)
-  }
 }
