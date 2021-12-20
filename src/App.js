@@ -54,7 +54,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/AddActivity" exact element={<AddActivity addActivityItem={addActivityItem} listActivities={listActivities} delItem={delItem} />} />
-        <Route element={<Main listActivities={listActivities} />} />
+        <Route path="*" element={<Main listActivities={listActivities} />} />
       </Routes>
     </>
 
