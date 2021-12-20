@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/casse-l-oeuf/static/css/main.13ce7bd7.chunk.css",
-    "main.js": "/casse-l-oeuf/static/js/main.b8481411.chunk.js",
-    "main.js.map": "/casse-l-oeuf/static/js/main.b8481411.chunk.js.map",
+    "main.css": "/casse-l-oeuf/static/css/main.7eb690a4.chunk.css",
+    "main.js": "/casse-l-oeuf/static/js/main.4346649b.chunk.js",
+    "main.js.map": "/casse-l-oeuf/static/js/main.4346649b.chunk.js.map",
     "runtime-main.js": "/casse-l-oeuf/static/js/runtime-main.afb6c40c.js",
     "runtime-main.js.map": "/casse-l-oeuf/static/js/runtime-main.afb6c40c.js.map",
     "static/css/2.383c0125.chunk.css": "/casse-l-oeuf/static/css/2.383c0125.chunk.css",
@@ -12,23 +12,23 @@
     "static/js/3.2b4f2118.chunk.js.map": "/casse-l-oeuf/static/js/3.2b4f2118.chunk.js.map",
     "index.html": "/casse-l-oeuf/index.html",
     "static/css/2.383c0125.chunk.css.map": "/casse-l-oeuf/static/css/2.383c0125.chunk.css.map",
-    "static/css/main.13ce7bd7.chunk.css.map": "/casse-l-oeuf/static/css/main.13ce7bd7.chunk.css.map",
+    "static/css/main.7eb690a4.chunk.css.map": "/casse-l-oeuf/static/css/main.7eb690a4.chunk.css.map",
     "static/js/2.9b25c42c.chunk.js.LICENSE.txt": "/casse-l-oeuf/static/js/2.9b25c42c.chunk.js.LICENSE.txt",
-    "static/media/egg1.d1138e8b.png": "/casse-l-oeuf/static/media/egg1.d1138e8b.png",
-    "static/media/egg2.22294d39.png": "/casse-l-oeuf/static/media/egg2.22294d39.png",
-    "static/media/egg3.74bed2cd.png": "/casse-l-oeuf/static/media/egg3.74bed2cd.png",
-    "static/media/egg4-1.43d44fdb.png": "/casse-l-oeuf/static/media/egg4-1.43d44fdb.png",
-    "static/media/egg42back.16bc16d6.png": "/casse-l-oeuf/static/media/egg42back.16bc16d6.png",
-    "static/media/egg42front.bf51fc1d.png": "/casse-l-oeuf/static/media/egg42front.bf51fc1d.png",
+    "static/media/egg1.46d6e339.png": "/casse-l-oeuf/static/media/egg1.46d6e339.png",
+    "static/media/egg2.016275bb.png": "/casse-l-oeuf/static/media/egg2.016275bb.png",
+    "static/media/egg3.b040a5bb.png": "/casse-l-oeuf/static/media/egg3.b040a5bb.png",
+    "static/media/egg4-1.63d57476.png": "/casse-l-oeuf/static/media/egg4-1.63d57476.png",
+    "static/media/egg42back.8c401645.png": "/casse-l-oeuf/static/media/egg42back.8c401645.png",
+    "static/media/egg42front.5b717827.png": "/casse-l-oeuf/static/media/egg42front.5b717827.png",
     "static/media/fondFerme.e15946aa.jpg": "/casse-l-oeuf/static/media/fondFerme.e15946aa.jpg",
-    "static/media/panier.b370474d.png": "/casse-l-oeuf/static/media/panier.b370474d.png",
+    "static/media/panier.f439dbcf.png": "/casse-l-oeuf/static/media/panier.f439dbcf.png",
     "static/media/reload.296f0ed5.png": "/casse-l-oeuf/static/media/reload.296f0ed5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.afb6c40c.js",
     "static/css/2.383c0125.chunk.css",
     "static/js/2.9b25c42c.chunk.js",
-    "static/css/main.13ce7bd7.chunk.css",
-    "static/js/main.b8481411.chunk.js"
+    "static/css/main.7eb690a4.chunk.css",
+    "static/js/main.4346649b.chunk.js"
   ]
 }
