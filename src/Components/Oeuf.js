@@ -12,7 +12,7 @@ import panier from '../images/panier.png'
 export default function Oeuf({listActivities, setAllLoaded}) {
 
     const [nbClick, setNbClick] = useState(0);
-    const nbClickMax = 20;
+    const nbClickMax = 15;
 
     const tapeOeuf = e => {
         setNbClick(prevNbClick => prevNbClick + 1);
