@@ -47,7 +47,7 @@ export default function Oeuf({listActivities, setAllLoaded}) {
             {(nbClick < nbClickMax*5/100) && <img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} >
             </img>}
 
-            {(nbClick < nbClickMax) && <img src={panier} alt="panier" className="panier" onLoad={() => setAllLoaded(true)}></img>}
+            {(nbClick < nbClickMax) && <img src={panier} alt="panier" git className="panier" onLoad={() => setAllLoaded(true)}></img>}
 
             {(nbClick < 1) &&<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_RxwlFx.json" background="transparent" speed="1" id="tapIcon" loop  autoplay></lottie-player>}
         </div>
