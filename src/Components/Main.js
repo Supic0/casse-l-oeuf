@@ -28,7 +28,7 @@ export default function Main({ listActivities }) {
                 style={style}>
                 <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_f3qi4ym6.json" background="transparent" speed="1" className="loadChiken" loop autoplay></lottie-player>
             </div>
-            <Link to="/casse-l-oeuf/AddActivity">
+            <Link to="/AddActivity">
                 <img src={listIcon} className="goToAdd" alt="go to addActivity panel"/>
             </Link>
             <Oeuf listActivities={listActivities} setAllLoaded={setAllLoaded}/>

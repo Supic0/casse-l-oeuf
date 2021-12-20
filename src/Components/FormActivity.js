@@ -57,7 +57,7 @@ export default function FormActivity({ listActivities, addActivityItem }) {
                     </svg>
                 </div>
                 {(listActivities.length != 0) ?
-                    <Link to="/casse-l-oeuf/" className="btn btn-primary"  >
+                    <Link to="/" className="btn btn-primary"  >
                     Jouer
                     </Link>
                     :

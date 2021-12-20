@@ -3,8 +3,7 @@ import Main from './Components/Main'
 import AddActivity from './Components/AddActivity';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import Connexion from './Components/Connexion';
-import { Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 
 
 
@@ -12,27 +11,27 @@ export default function App() {
 
   const [listActivities, setListActivities] = useState([
     {
-      id:0,
+      id: 0,
       name: "Pate à modeler",
       image: "./images/pate.jpg"
     },
     {
-      id:1,
+      id: 1,
       name: "Peinture",
       image: "./images/peinture.jpg"
     },
     {
-      id:2,
+      id: 2,
       name: "Cuisiner avec Maman",
       image: "./images/cuisine.jpg"
     }
   ]);
 
   useEffect(() => {
-    if (localStorage.getItem("activities")!=null && JSON.parse(localStorage.getItem("activities")).length!=0 ) {
+    if (localStorage.getItem("activities") != null && JSON.parse(localStorage.getItem("activities")).length != 0) {
       console.log(localStorage.getItem("activities"))
-    setListActivities(JSON.parse(localStorage.getItem("activities")))
-    } 
+      setListActivities(JSON.parse(localStorage.getItem("activities")))
+    }
   }, [])
 
 
@@ -52,13 +51,12 @@ export default function App() {
 
   return (
 
-    <React.Fragment>
+    <>
       <Routes>
-        <Route path="/casse-l-oeuf/" exact element={<Main listActivities={listActivities} />} />
-        <Route path="/casse-l-oeuf/AddActivity" exact element={<AddActivity addActivityItem={addActivityItem}  listActivities={listActivities} delItem={delItem} />} />
-        <Route path="/casse-l-oeuf/Connexion" exact element={<Connexion  />} />
+        <Route path="/AddActivity" exact element={<AddActivity addActivityItem={addActivityItem} listActivities={listActivities} delItem={delItem} />} />
+        <Route element={<Main listActivities={listActivities} />} />
       </Routes>
-    </React.Fragment>
- 
+    </>
+
   )
 }

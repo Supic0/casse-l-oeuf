@@ -4,3 +4,16 @@
     --thirdColor: 127, 182, 133;
     --red: 239, 111, 108;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+      /* The hack for Safari */
+      height: -webkit-fill-available;
+    }
+  }

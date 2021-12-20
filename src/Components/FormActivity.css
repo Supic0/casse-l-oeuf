@@ -52,6 +52,7 @@
     text-align:center;
     height: 28px;
     width: 100%;
+    user-select: text;
 }
 .inputField {
     width: 50%;
