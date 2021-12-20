@@ -3,6 +3,7 @@ import './AddActivity.css'
 import FormActivity from './FormActivity'
 import List from './List'
 import listIcon from '../icons/liste.png'
+import { Link } from 'react-router-dom'
 
 export default function AddActivity({ addActivityItem, listActivities, delItem}) {
 

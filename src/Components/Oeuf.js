@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState} from 'react'
 import './Oeuf.css'
 import Activity from './Activity'
 import egg1 from '../images/egg1.png'
@@ -32,9 +32,9 @@ export default function Oeuf({listActivities, setAllLoaded}) {
             <div className="Oeufanim">
 
                 {(nbClick <= nbClickMax) && <img alt="Oeuf cassé arrière" src={egg42back} className={`Oeuf ${(nbClick >= nbClickMax) ? "down": ""}`}></img>}
-                {(listActivities?.length!=0)&&<Activity nbClickMax={nbClickMax}setAllLoaded={setAllLoaded} listActivities={listActivities} setNbClick={setNbClick} nbClick={nbClick}/>}
-                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front up"src={egg41} className={`Oeuf ${(nbClick >= nbClickMax) ? "up":""}`} ></img>}
-                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front down"src={egg42front} className={`Oeuf ${(nbClick >= nbClickMax) ? "down":""}`}></img>}
+                {(listActivities?.length!==0)&&<Activity nbClickMax={nbClickMax}setAllLoaded={setAllLoaded} listActivities={listActivities} setNbClick={setNbClick} nbClick={nbClick}/>}
+                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front up" src={egg41} className={`Oeuf ${(nbClick >= nbClickMax) ? "up":""}`} ></img>}
+                {(nbClick <= nbClickMax) && <img alt="Oeuf cassé Front down" src={egg42front} className={`Oeuf ${(nbClick >= nbClickMax) ? "down":""}`}></img>}
 
             </div>
 
@@ -44,10 +44,10 @@ export default function Oeuf({listActivities, setAllLoaded}) {
             {(nbClick < nbClickMax*50/100) && <img alt="Oeuf cassé" src={egg2} className="Oeuf" onClick={tapeOeuf}>
             </img>}
 
-            {(nbClick < nbClickMax*5/100) && <img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} onLoad={() => setAllLoaded(true)}>
+            {(nbClick < nbClickMax*5/100) && <img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} >
             </img>}
 
-            {(nbClick < nbClickMax) && <img src={panier} className="panier"></img>}
+            {(nbClick < nbClickMax) && <img src={panier} alt="panier" className="panier" onLoad={() => setAllLoaded(true)}></img>}
 
             {(nbClick < 1) &&<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_RxwlFx.json" background="transparent" speed="1" id="tapIcon" loop  autoplay></lottie-player>}
         </div>
