@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/casse-l-oeuf/static/css/main.1b020ec3.chunk.css",
-    "main.js": "/casse-l-oeuf/static/js/main.28957a04.chunk.js",
-    "main.js.map": "/casse-l-oeuf/static/js/main.28957a04.chunk.js.map",
-    "runtime-main.js": "/casse-l-oeuf/static/js/runtime-main.695e0c95.js",
-    "runtime-main.js.map": "/casse-l-oeuf/static/js/runtime-main.695e0c95.js.map",
+    "main.css": "/casse-l-oeuf/static/css/main.79da5f33.chunk.css",
+    "main.js": "/casse-l-oeuf/static/js/main.21e0b1f8.chunk.js",
+    "main.js.map": "/casse-l-oeuf/static/js/main.21e0b1f8.chunk.js.map",
+    "runtime-main.js": "/casse-l-oeuf/static/js/runtime-main.afb6c40c.js",
+    "runtime-main.js.map": "/casse-l-oeuf/static/js/runtime-main.afb6c40c.js.map",
     "static/css/2.383c0125.chunk.css": "/casse-l-oeuf/static/css/2.383c0125.chunk.css",
-    "static/js/2.0b382211.chunk.js": "/casse-l-oeuf/static/js/2.0b382211.chunk.js",
-    "static/js/2.0b382211.chunk.js.map": "/casse-l-oeuf/static/js/2.0b382211.chunk.js.map",
-    "static/js/3.0445ab0d.chunk.js": "/casse-l-oeuf/static/js/3.0445ab0d.chunk.js",
-    "static/js/3.0445ab0d.chunk.js.map": "/casse-l-oeuf/static/js/3.0445ab0d.chunk.js.map",
+    "static/js/2.9b25c42c.chunk.js": "/casse-l-oeuf/static/js/2.9b25c42c.chunk.js",
+    "static/js/2.9b25c42c.chunk.js.map": "/casse-l-oeuf/static/js/2.9b25c42c.chunk.js.map",
+    "static/js/3.2b4f2118.chunk.js": "/casse-l-oeuf/static/js/3.2b4f2118.chunk.js",
+    "static/js/3.2b4f2118.chunk.js.map": "/casse-l-oeuf/static/js/3.2b4f2118.chunk.js.map",
     "index.html": "/casse-l-oeuf/index.html",
     "static/css/2.383c0125.chunk.css.map": "/casse-l-oeuf/static/css/2.383c0125.chunk.css.map",
-    "static/css/main.1b020ec3.chunk.css.map": "/casse-l-oeuf/static/css/main.1b020ec3.chunk.css.map",
-    "static/js/2.0b382211.chunk.js.LICENSE.txt": "/casse-l-oeuf/static/js/2.0b382211.chunk.js.LICENSE.txt",
+    "static/css/main.79da5f33.chunk.css.map": "/casse-l-oeuf/static/css/main.79da5f33.chunk.css.map",
+    "static/js/2.9b25c42c.chunk.js.LICENSE.txt": "/casse-l-oeuf/static/js/2.9b25c42c.chunk.js.LICENSE.txt",
     "static/media/egg1.d1138e8b.png": "/casse-l-oeuf/static/media/egg1.d1138e8b.png",
     "static/media/egg2.22294d39.png": "/casse-l-oeuf/static/media/egg2.22294d39.png",
     "static/media/egg3.74bed2cd.png": "/casse-l-oeuf/static/media/egg3.74bed2cd.png",
@@ -25,10 +25,10 @@
     "static/media/reload.296f0ed5.png": "/casse-l-oeuf/static/media/reload.296f0ed5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.695e0c95.js",
+    "static/js/runtime-main.afb6c40c.js",
     "static/css/2.383c0125.chunk.css",
-    "static/js/2.0b382211.chunk.js",
-    "static/css/main.1b020ec3.chunk.css",
-    "static/js/main.28957a04.chunk.js"
+    "static/js/2.9b25c42c.chunk.js",
+    "static/css/main.79da5f33.chunk.css",
+    "static/js/main.21e0b1f8.chunk.js"
   ]
 }
