@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react'
 import './FormActivity.css'
-import ApiPopup from './ApiPopup'
 import { Link } from 'react-router-dom'
 
 export default function FormActivity({ listActivities, addActivityItem }) {
@@ -68,7 +67,6 @@ export default function FormActivity({ listActivities, addActivityItem }) {
                     }
         </form>
 
-            { apiPopup && <ApiPopup setApiPopup={setApiPopup} /> }
         </>
     )
 }
