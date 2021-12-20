@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/casse-l-oeuf/static/css/main.7eb690a4.chunk.css",
-    "main.js": "/casse-l-oeuf/static/js/main.f59cf54a.chunk.js",
-    "main.js.map": "/casse-l-oeuf/static/js/main.f59cf54a.chunk.js.map",
+    "main.js": "/casse-l-oeuf/static/js/main.69108ef3.chunk.js",
+    "main.js.map": "/casse-l-oeuf/static/js/main.69108ef3.chunk.js.map",
     "runtime-main.js": "/casse-l-oeuf/static/js/runtime-main.afb6c40c.js",
     "runtime-main.js.map": "/casse-l-oeuf/static/js/runtime-main.afb6c40c.js.map",
     "static/css/2.383c0125.chunk.css": "/casse-l-oeuf/static/css/2.383c0125.chunk.css",
@@ -14,12 +14,6 @@
     "static/css/2.383c0125.chunk.css.map": "/casse-l-oeuf/static/css/2.383c0125.chunk.css.map",
     "static/css/main.7eb690a4.chunk.css.map": "/casse-l-oeuf/static/css/main.7eb690a4.chunk.css.map",
     "static/js/2.9b25c42c.chunk.js.LICENSE.txt": "/casse-l-oeuf/static/js/2.9b25c42c.chunk.js.LICENSE.txt",
-    "static/media/egg1.46d6e339.png": "/casse-l-oeuf/static/media/egg1.46d6e339.png",
-    "static/media/egg2.016275bb.png": "/casse-l-oeuf/static/media/egg2.016275bb.png",
-    "static/media/egg3.b040a5bb.png": "/casse-l-oeuf/static/media/egg3.b040a5bb.png",
-    "static/media/egg4-1.63d57476.png": "/casse-l-oeuf/static/media/egg4-1.63d57476.png",
-    "static/media/egg42back.8c401645.png": "/casse-l-oeuf/static/media/egg42back.8c401645.png",
-    "static/media/egg42front.5b717827.png": "/casse-l-oeuf/static/media/egg42front.5b717827.png",
     "static/media/fondFerme.e15946aa.jpg": "/casse-l-oeuf/static/media/fondFerme.e15946aa.jpg",
     "static/media/panier.f439dbcf.png": "/casse-l-oeuf/static/media/panier.f439dbcf.png",
     "static/media/reload.296f0ed5.png": "/casse-l-oeuf/static/media/reload.296f0ed5.png"
@@ -29,6 +23,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.9b25c42c.chunk.js",
     "static/css/main.7eb690a4.chunk.css",
-    "static/js/main.f59cf54a.chunk.js"
+    "static/js/main.69108ef3.chunk.js"
   ]
 }
