@@ -10,7 +10,6 @@ ul {
     .listActivity {
 
         width: 100%;
-        max-height: -webkit-fill-available;
         height: 100%;
         display: flex;
         align-items: center;

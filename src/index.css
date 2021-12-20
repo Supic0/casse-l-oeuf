@@ -4,8 +4,12 @@
     --thirdColor: 127, 182, 133;
     --red: 239, 111, 108;
 }
-
+html {
+    min-height: -webkit-fill-available;
+}
 body {
     padding: 0;
     margin: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
