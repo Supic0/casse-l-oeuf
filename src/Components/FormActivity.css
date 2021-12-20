@@ -1,5 +1,5 @@
 
-.plus{
+.plus, .previewImg{
     border: 2px solid lightgrey;
 	background-color: #fff;
 	font-size: 16px;
@@ -7,10 +7,8 @@
 	width: 2.5em;
 	border-radius: 30px;
 	position: relative;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%);
     font-size: 55px;
+    object-fit: cover;
 }
 
 .plus::after{
@@ -35,30 +33,47 @@
     height: 1em;
     width: 0.2em;
 }
+.formActivity {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 37%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .input {
     border: 2px solid rgb(180, 180, 180);
-    width: 100%;
     border-radius: 8px;
     text-align:center;
+    height: 28px;
+    width: 100%;
+}
+.inputField {
+    width: 50%;
+    position: relative;
 }
 
-.form {
-    display:flex;
-    width: 120%;
-}
 .envoi {
-    margin-left: 10px;
+    width: 25px;
+    margin-top: 1px;
+    position: absolute;
+    right: -35px;
 }
+
 .envoi:active {
     filter: brightness(80%);
 }
 
-.jouer {
-    position: absolute;
-    bottom: -32%;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 0;
-    margin-top: 20px;
+@media (min-width: 800px)  {
+    .formActivity {
+        max-width: 650px;
+        width: 60%;
+    position: static;
+    transform: none;
+    
+    }
 }

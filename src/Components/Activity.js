@@ -20,7 +20,7 @@ export default function Activity({ setAllLoaded, listActivities, setNbClick, nbC
         setItemChosen(item);
         }
 
-    }, [])
+    }, [listActivities])
 
 
 
@@ -28,8 +28,8 @@ export default function Activity({ setAllLoaded, listActivities, setNbClick, nbC
 return (
 
     <div className={`Activity ${nbClick >= nbClickMax ? "popOut" : ""}`}>
-        <img alt="liée à l'activité" className="imageActivity" src="https://cdn-tam.ouest-france.fr/media/cache/thumb_400/recette-de-la-pate-a-modeler-tete-a-modeler.jpeg" />
-            <div className="activityName">{itemChosen&&itemChosen.name}</div>
+        <img alt="liée à l'activité" className="imageActivity" src={itemChosen?.image} />
+            <div className="activityName">{itemChosen?.name}</div>
         <img src={reload} className="reload" href="/casse-l-oeuf/"
             onClick={() => {
                 setAllLoaded(false);

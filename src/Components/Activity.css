@@ -19,7 +19,9 @@ transition-delay: 1.2s,1.2s;
 
 .imageActivity {
     width:100%;
+    aspect-ratio: 1/1;
     border-radius: 15%;
+    object-fit: cover;
 }
 
 .activityName {

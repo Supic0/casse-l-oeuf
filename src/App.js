@@ -7,9 +7,26 @@ import Connexion from './Components/Connexion';
 import { Routes, Route } from 'react-router-dom';
 
 
+
 export default function App() {
 
-  const [listActivities, setListActivities] = useState([{id:0,name:"Peinture"},{id:1,name:"Cache-Cache"},{id:2,name:"Manger un bonbon"}]);
+  const [listActivities, setListActivities] = useState([
+    {
+      id:0,
+      name: "Pate à modeler",
+      image: "./images/pate.jpg"
+    },
+    {
+      id:1,
+      name: "Peinture",
+      image: "./images/peinture.jpg"
+    },
+    {
+      id:2,
+      name: "Cuisiner avec Maman",
+      image: "./images/cuisine.jpg"
+    }
+  ]);
 
   useEffect(() => {
     if (localStorage.getItem("activities")!=null && JSON.parse(localStorage.getItem("activities")).length!=0 ) {

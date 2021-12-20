@@ -1,0 +1,8 @@
+@media (min-width: 800px)  {
+    .addActivity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+}

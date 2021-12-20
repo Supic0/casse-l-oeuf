@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './List.css'
 
+
 export default function List({ listActivities, delItem }) {
+const [show, setShow] = useState(false);
+
     return (
-        <div className="card listActivity overflow-auto">
-            <ul className="list-group">
+        <div className={`listActivity ${show?"show":""}`}>
+            <div className={`showHide ${show?"turn":""}`} onClick={() => setShow(!show)}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                    <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                </svg>
+            </div>
+
+            <ul className="allItems">
                 {
                     listActivities.map((item) => {
                         return (
-                            <div className="list-group-item" style={{ display: "flex", position: "relative", width:"100%" }}>
+                            <div className="list-group-item" style={{ display: "flex", position: "relative", width: "100%" }}>
                                 <li className="" key={item.id}>
                                     {item.name}
                                 </li>
@@ -18,17 +27,14 @@ export default function List({ listActivities, delItem }) {
                     })
                 }
             </ul>
-            {!listActivities[0]&& <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_s9lvjg2e.json" background="transparent" speed="1"
-                style={{
+            {!listActivities[0] && <div style={{
                     position: "absolute",
                     bottom: "10px",
-                    left:"50%",
-                    transform:"translate(-50%)",
                     width: "80%",
-                    height: "auto"
-                }}
+                }} ><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_s9lvjg2e.json" background="transparent" speed="1"
+                
                 loop autoplay>
-                </lottie-player>}
+            </lottie-player></div>}
         </div>
     )
 }
