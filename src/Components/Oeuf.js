@@ -38,14 +38,14 @@ export default function Oeuf({listActivities, setAllLoaded}) {
 
             </div>
 
-            {(nbClick < nbClickMax) && (<img alt="Oeuf cassé" src={egg3} className="Oeuf" onClick={tapeOeuf}>
-            </img>)}
+            {(nbClick < nbClickMax) && <img alt="Oeuf cassé" src={egg3} className="Oeuf" onClick={tapeOeuf}>
+            </img>}
 
-            {(nbClick < nbClickMax*50/100) && (<img alt="Oeuf cassé" src={egg2} className="Oeuf" onClick={tapeOeuf}>
-            </img>)}
+            {(nbClick < nbClickMax*50/100) && <img alt="Oeuf cassé" src={egg2} className="Oeuf" onClick={tapeOeuf}>
+            </img>}
 
-            {(nbClick < nbClickMax*5/100) && (<img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} onLoad={() => setAllLoaded(true)}>
-            </img>)}
+            {(nbClick < nbClickMax*5/100) && <img alt="Oeuf cassé" src={egg1} className="Oeuf" onClick={tapeOeuf} onLoad={() => setAllLoaded(true)}>
+            </img>}
 
             {(nbClick < nbClickMax) && <img src={panier} className="panier"></img>}
 

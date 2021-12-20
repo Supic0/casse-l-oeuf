@@ -15,6 +15,7 @@
     height: 100%;
     position: absolute;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
     justify-content: center;
 
@@ -35,6 +36,7 @@
     left:50%;
     transform: translate(-50%, -50%);
     display: flex;
+    display: -webkit-flex;
     align-items: center;
     justify-content: center;
     margin:0;

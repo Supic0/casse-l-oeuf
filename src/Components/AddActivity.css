@@ -6,3 +6,9 @@
     justify-content: space-around;
 }
 }
+.goBack {
+    position: absolute;
+    left:5px;
+    top: 5px;
+    width: 50px;
+}
