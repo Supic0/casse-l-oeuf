@@ -15,7 +15,7 @@ ul {
         align-items: center;
         flex-direction: column;
         position: absolute;
-        top: 95vh;
+        bottom: 5vh;
         transition: top;
         transition-duration: 0.75s;
         transition-timing-function:ease;
