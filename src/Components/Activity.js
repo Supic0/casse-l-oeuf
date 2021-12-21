@@ -15,9 +15,9 @@ export default function Activity({ setAllLoaded, listActivities, setNbClick, nbC
 
 
     useEffect(() => {
-        if (listActivities.length!=0) {
-        let item = listActivities[Math.floor(Math.random() * listActivities.length)];
-        setItemChosen(item);
+        if (listActivities.length != 0) {
+            let item = listActivities[Math.floor(Math.random() * listActivities.length)];
+            setItemChosen(item);
         }
 
     }, [listActivities])
@@ -25,19 +25,22 @@ export default function Activity({ setAllLoaded, listActivities, setNbClick, nbC
 
 
 
-return (
-
-    <div className={`Activity ${nbClick >= nbClickMax ? "popOut" : ""}`}>
-        <img alt="liée à l'activité" className="imageActivity" src={itemChosen?.image} />
+    return (
+        <div className={`Activity ${nbClick >= nbClickMax ? "popOut" : ""}`}>
+            <div className="wrapper">
+                <img alt="liée à l'activité" className="imageActivity" src={itemChosen?.image} />
+            </div>
             <div className="activityName">{itemChosen?.name}</div>
-        <img src={reload} className="reload" href="/casse-l-oeuf/"
-            onClick={() => {
-                setAllLoaded(false);
-                setTimeout(()=>{setNbClick(0);
-                    chose();},500);
-            }
-            }></img>
+            <img src={reload} className="reload" href="/casse-l-oeuf/"
+                onClick={() => {
+                    setAllLoaded(false);
+                    setTimeout(() => {
+                        setNbClick(0);
+                        chose();
+                    }, 500);
+                }
+                }></img>
 
-    </div >
-)
+        </div >
+    )
 }
