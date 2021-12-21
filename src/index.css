@@ -5,6 +5,11 @@
     --red: 239, 111, 108;
     -webkit-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 html {
     height: -webkit-fill-available;
