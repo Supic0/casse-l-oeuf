@@ -46,6 +46,7 @@ export default function App() {
       const newList = [...listActivities, newItem];
       setListActivities(newList);
       localStorage.setItem('activities', JSON.stringify(newList));
+      console.log(newList);
     }
   }
 

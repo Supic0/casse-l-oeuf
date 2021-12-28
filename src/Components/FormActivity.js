@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 export default function FormActivity({ listActivities, addActivityItem }) {
 
     const [value, setValue] = useState('');
-    const [apiPopup, setApiPopup] = useState(false);
     const [img, setImg] = useState();
     const ref = useRef();
 

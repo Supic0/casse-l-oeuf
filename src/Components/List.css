@@ -21,9 +21,9 @@ ul {
         transition-timing-function:ease;
         background-color: white;
         background-color: transparent;
-        overflow: scroll;
+        overflow-y : scroll;
+        overflow-x: hidden;
     }
-
     .showHide{
         display: flex;
         align-items: center;
