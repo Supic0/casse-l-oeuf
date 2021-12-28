@@ -4,8 +4,27 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    
 }
 }
+
+
+.fond{
+    position:absolute;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+
+}
+
 .goBack {
     position: absolute;
     left:5px;

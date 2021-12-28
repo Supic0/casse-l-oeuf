@@ -1,7 +1,7 @@
 
 .plus, .previewImg{
-    border: 2px solid lightgrey;
-	background-color: #fff;
+    border: 2px solid #ffffff;
+	background-color: rgba(248, 248, 248, 0.15);
 	font-size: 16px;
 	height: 2.5em;
 	width: 2.5em;
@@ -14,7 +14,7 @@
 .plus::after{
     content: "";
     display: block;
-    background-color: grey;
+    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,7 +25,7 @@
 .plus::before {
     content: "";
     display: block;
-    background-color: grey;
+    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,12 +47,13 @@
 }
 
 .input {
-    border: 2px solid rgb(180, 180, 180);
+    border: 2px solid white;
     border-radius: 8px;
     text-align:center;
     height: 28px;
     width: 100%;
     user-select: text;
+    background-color: transparent;
 }
 .inputField {
     width: 50%;
@@ -60,10 +61,20 @@
 }
 
 .envoi {
+    
     width: 25px;
     margin-top: 1px;
     position: absolute;
     right: -35px;
+
+}
+.envoi::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: white;
 }
 
 .envoi:active {
