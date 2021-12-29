@@ -41,9 +41,11 @@ export default function App() {
   }
 
   const addActivityItem = (newItem) => {
+    if (!listActivities.some(item => item.name === newItem.name)) {
       const newList = [...listActivities, newItem];
       setListActivities(newList);
       localStorage.setItem('activities', JSON.stringify(newList));
+    }
   }
 
   return (
