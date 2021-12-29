@@ -29,7 +29,6 @@ export default function App() {
 
   useEffect(() => {
     if (localStorage.getItem("activities") != null && JSON.parse(localStorage.getItem("activities")).length != 0) {
-      console.log(localStorage.getItem("activities"))
       setListActivities(JSON.parse(localStorage.getItem("activities")))
     }
   }, [])
@@ -42,12 +41,9 @@ export default function App() {
   }
 
   const addActivityItem = (newItem) => {
-    if (!listActivities.some(item => item.name === newItem.name)) {
       const newList = [...listActivities, newItem];
       setListActivities(newList);
       localStorage.setItem('activities', JSON.stringify(newList));
-      console.log(newList);
-    }
   }
 
   return (
